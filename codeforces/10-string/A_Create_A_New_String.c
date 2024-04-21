@@ -10,17 +10,10 @@ int main()
     char b[1000];
     gets(b);
 
-    int count = 0;
-    for (int i = 0; i < a[i] != 0; i++)
-    {
-        count++;
-    }
-    int count1 = 0;
-    for (int i = 0; i < b[i] != 0; i++)
-    {
-        count1++;
-    }
-    printf("%d %d\n", count, count1);
+    int st = strlen(a);
+    int st1 = strlen(b);
+
+    printf("%d %d\n", st, st1);
     printf("%s %s", a, b);
 
     return 0;
