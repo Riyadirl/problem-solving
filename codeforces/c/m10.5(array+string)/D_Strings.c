@@ -9,7 +9,7 @@ int main()
     gets(a);
     char b[11];
     gets(b);
-    // 1
+    
     int a_len = strlen(a);
     int b_len = strlen(b);
 
