@@ -17,7 +17,7 @@ int main()
             printf("*");
         }
 
-        if (i <= n - 1)
+        if (i < n )
         {
             s--;
             k = k + 2;
