@@ -3,15 +3,15 @@
 #include <math.h>
 #include <stdlib.h>
 
-void fun(int a[], int n, int i)
+int fun(int a[], int n, int i)
 {
-    if (i < 0)
-        return;
-    if (i % 2 == 0)
-    {
-        printf("%d ", a[i]);
-    }
-    fun(a, n, i - 1);
+    if (i == n)
+        return 0;
+    int sum = 0;
+    sum = a[i] + fun(a, n, i + 1);
+    //  printf("%d", sum);
+
+    return sum;
 }
 
 int main()
@@ -23,6 +23,9 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    fun(a, n, n - 1);
+
+    int f = fun(a, n, 0);
+    printf("%d", f);
     return 0;
 }
+
