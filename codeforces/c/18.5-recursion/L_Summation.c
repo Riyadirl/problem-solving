@@ -9,7 +9,6 @@ int fun(int a[], int n, int i)
         return 0;
     int sum = 0;
     sum = a[i] + fun(a, n, i + 1);
-    //  printf("%d", sum);
 
     return sum;
 }
@@ -24,7 +23,7 @@ int main()
         scanf("%d", &a[i]);
     }
 
-    int f = fun(a, n, 0);
-    printf("%d", f);
+    long long int f = fun(a, n, 0);
+    printf("%lld", f);
     return 0;
 }
