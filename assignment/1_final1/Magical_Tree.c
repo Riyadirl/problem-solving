@@ -8,13 +8,13 @@ int main()
 
     int n;
     scanf("%d", &n);
-    int rows = ((n + 1) / 2) + 5;
+    int row = ((n + 1) / 2) + 5;
 
     // upper
-    for (int i = 1; i <= rows; ++i)
+    for (int i = 1; i <= row; ++i)
     {
         // space
-        for (int j = 1; j <= rows - i; ++j)
+        for (int j = 1; j <= row - i; ++j)
         {
             printf(" ");
         }
