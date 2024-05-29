@@ -1,8 +1,7 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
-string threeValue(int a[], int n, int s)
+int three(int a[], int n, int s)
 {
     sort(a, a + n);
     for (int i = 0; i < n - 2; ++i)
@@ -14,7 +13,7 @@ string threeValue(int a[], int n, int s)
             int sum = a[i] + a[left] + a[right];
             if (sum == s)
             {
-                return "YES";
+                return 1;
             }
             else if (sum < s)
             {
@@ -26,7 +25,7 @@ string threeValue(int a[], int n, int s)
             }
         }
     }
-    return "NO";
+    return 0;
 }
 
 int main()
@@ -43,7 +42,17 @@ int main()
         {
             cin >> a[i];
         }
-        cout << threeValue(a, n, s) << endl;
+
+        int result = three(a, n, s);
+        
+        if (result == 1)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
 
     return 0;
