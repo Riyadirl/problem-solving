@@ -1,21 +1,21 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-class Node
+class node
 {
 public:
     int val;
-    Node *next;
-    Node(int val)
+    node *next;
+    node(int val)
     {
         this->val = val;
         this->next = NULL;
     }
 };
 
-void insert_tail(Node *&head, Node *&tail, int val)
+void insert_tail(node *&head, node *&tail, int val)
 {
-    Node *newNode = new Node(val);
+    node *newNode = new node(val);
     if (head == NULL)
     {
         head = newNode;
@@ -26,10 +26,10 @@ void insert_tail(Node *&head, Node *&tail, int val)
     tail = newNode;
 }
 
-void search(Node *head, int x)
+void find(node *head, int x)
 {
     int flag = 0;
-    Node *temp = head;
+    node *temp = head;
     while (temp != NULL)
     {
         if (temp->val == x)
@@ -49,8 +49,8 @@ int main()
     cin >> t;
     while (t--)
     {
-        Node *head = NULL;
-        Node *tail = NULL;
+        node *head = NULL;
+        node *tail = NULL;
         int val;
         while (true)
         {
@@ -61,9 +61,10 @@ int main()
             }
             insert_tail(head, tail, val);
         }
+        
         int x;
         cin >> x;
-        search(head, x);
+        find(head, x);
     }
     return 0;
 }
