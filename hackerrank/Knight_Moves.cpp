@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int N, M;
 int mat[100][100];
 bool isVisited[100][100];
@@ -9,6 +10,7 @@ bool isValid(int i, int j)
 {
     return !(i < 0 || i >= N || j < 0 || j >= M);
 }
+
 void bfs(int source_i, int source_j)
 {
     queue<pair<int, int>> flow;
