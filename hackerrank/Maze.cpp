@@ -3,6 +3,7 @@
 #define PR pair<ll, ll>
 using namespace std;
 const ll N = 1e3 + 5;
+
 int n, m;
 PR source, dest;
 char mat[N][N];
