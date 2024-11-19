@@ -34,13 +34,9 @@ int main()
         }
 
         if (func(N, 1))
-        {
             cout << "YES" << endl;
-        }
         else
-        {
             cout << "NO" << endl;
-        }
     }
     return 0;
 }
